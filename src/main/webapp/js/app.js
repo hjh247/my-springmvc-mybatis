@@ -25,7 +25,7 @@ student.controller('studentController', function($scope, $resource) {
             isArray : true
         },
         'update' : {
-            method : 'POST',
+            method : 'PUT',
             isArray : true,
             headers : {
                 'Content-Type' : 'application/json'

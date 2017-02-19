@@ -38,7 +38,7 @@ public class StudentRestController {
         return students;
     }
 
-    @RequestMapping(value="/update",method=RequestMethod.POST)
+    @RequestMapping(value="/update",method=RequestMethod.PUT)
     public @ResponseBody List<Student> updateStudent(@RequestBody Student student){
         logger.info("rest api: start update");
         studentService.update(student);
