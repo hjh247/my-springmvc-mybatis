@@ -9,6 +9,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<context:component-scan base-package="com.hjh247.controller" />
 	<mvc:annotation-driven />  
 
+	<mvc:default-servlet-handler/>
+	
 	<bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 		<property name="supportedMediaTypes">
 			<list>

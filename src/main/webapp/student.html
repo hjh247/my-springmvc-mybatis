@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="studentService">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Student List</title>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/angular-resource.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<style type="text/css">
+</style>
+</script>
+</head>
+<body ng-controller="studentController">
+
+	 <div id="studentList" style="margin-left: auto; margin-right: auto;">
+	  <table border="1" style="margin-left: auto; margin-right: auto;">  
+	   <tr>
+		<th>id</th>
+		<th>name</th>
+	   </tr>
+	   <tr ng-repeat="student in mydata" ng-class-even="'even'"
+		ng-class-odd="'odd'">
+		<td>{{student.id}}</td>
+		<td>{{student.name}}</td>
+		<td>
+			<a href="" ng-click="updateStudent(student)">Update</a>
+			<a href="" ng-click="deleteStudent(student)">Delete</a>
+		</td>
+	   </tr>
+	  </table>
+	 </div>
+ 
+	 <hr/>
+ 
+	 <div id="update" style="display: block; margin-left: auto; margin-right: auto;">
+	  <table border="1" style="margin-left: auto; margin-right: auto;">
+	   <tr>
+		<td>id</td>
+		<td><input type="text" id="id" name="student.id"
+		 ng-model="modifyStudent.id" /></td>
+	   </tr>
+	   <tr>
+		<td>name</td>
+		<td><input type="text" id="name" name="student.username"
+		 ng-model="modifyStudent.name" /></td>
+	   </tr>
+	   <tr>
+		<td colspan="2"><input type="button" value="Update"
+		 ng-click="updateUserClick()" /></td>
+	   </tr>
+	  </table>
+	 </div> 
+ 
+ 
+</body>
+</html>
